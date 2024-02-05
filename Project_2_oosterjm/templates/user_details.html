@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+body {
+    background-color: #f0f0f0; /* Grayscale background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Blue color for headers */
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* New styles for user_details.html */
+.user-details {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.user-details p {
+    margin: 10px 0;
+}
+
+.user-details button {
+    background-color: #007bff; /* Blue color for buttons */
+    color: #ffffff;
+    padding: 2px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.user-details button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+    </style>
+</head>
+<body>
+<div class="user-details">
+    <h1>User Details</h1>
+    <p>Username: {{ username }}</p>
+    <p>Password: {{ user_info.password }}</p>
+    <p>First Name: {{ user_info.first_name }}</p>
+    <p>Last Name: {{ user_info.last_name }}</p>
+    <p>Email: {{ user_info.email }}</p>
+
+    <!-- Add a button to return to the registration page -->
+    <form action="/" method="get">
+        <input type="submit" value="Return to Registration Page">
+    </form>
+</div>
+</body>
+</html>
